@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MockAPI</title>
+</head>
+
+<body>
+    <section>
+        <h1>포켓몬 등록</h1>
+        <!-- laber, flex ... -->
+        <form id="pokeRegister">
+            <input name="pokeName">
+            <button>등록</button>
+        </form>
+    </section>
+    <script>
+        // Dom
+        // querySelector (선택자 사용 & `#` 아이디 사용)
+        const form = document.querySelector("#pokeRegister");
+
+        // https://mockapi.io/
+
+
+        // Eventlistener
+        // click 아님! (이벤트 타입)
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // 기본 폼 제출 비활성화
+            console.log("제출");
+        })
+
+    </script>
+
+</body>
+
+</html>
