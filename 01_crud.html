@@ -20,6 +20,10 @@
         </form>
         <section id="pokeList"></section>
     </section>
+    <!-- 외부 스크립트를 불러와줘야함 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+
     <script>
         // DOM
         // querySelector (선택자 사용) & '#'' 아이디 사용
@@ -83,6 +87,14 @@
             // const formData = new FormData();
             // formData.append("name", name);
             // 2. JSON 으로 전달
+
+            // // [Axios 구현]
+            // const response = await axios.post(apiURL, payload); // post -> 그냥 별도의 설정 없이 payload를 넣으면 -> header까지 달아줌
+            // //   .then(console.log); // 응답 객체
+            // // response.data -> 알아서 json으로 변환해줌
+            // console.log("response.data", response.data);
+
+            // [Fetch 구현]
             const payload = { name }; // 단축 -> 변수명으로 바로 넣으면 그 키를 가지는 프로퍼티화 시켜줌
             console.log(payload);
             const response = await fetch(apiURL, {

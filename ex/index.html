@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포켓몬 도감 검색</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>포켓몬 검색</h1>
+
+    <div class="search-card">
+      <div class="search-group">
+        <input type="text" id="search-input" placeholder="영문 포켓몬 이름 입력 (예: pikachu, ditto)">
+        <button id="search-btn">검색</button>
+      </div>
+    </div>
+
+    <div id="result-container">
+      <!-- 동적으로 조립된 결과 카드가 들어가는 구역 -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
