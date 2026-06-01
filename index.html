@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포켓몬 박사의 연구실 | Pokémon Lab</title>
+    <!-- Google Fonts: Outfit (English text) & Pretendard for sleek Korean typography -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./02_style.css" />
+</head>
+
+<body>
+    <!-- Lab Header -->
+    <header class="lab-header">
+        <div class="header-logo">
+            <span class="pulse-indicator"></span>
+            <h1>OAK'S RESEARCH LAB</h1>
+        </div>
+        <div class="system-status">
+            <span class="status-text">SYSTEM ONLINE</span>
+            <div class="wifi-indicator">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace Grid -->
+    <main class="lab-container">
+        <!-- Left: Professor & Speech Zone -->
+        <section class="professor-zone">
+            <!-- Dynamic Speech Bubble -->
+            <div class="speech-bubble">
+                <div class="speech-header">
+                    <span class="speaker-name">오박사 (Professor Oak)</span>
+                    <span class="speech-badge">LIVE</span>
+                </div>
+                <div class="speech-content">
+                    <p id="professorSpeech">반갑네, 젊은이! 나는 이 연구소의 포켓몬 박사라네. 궁금한 포켓몬의 이름(한글/영문)이나 도감 번호를 오른쪽에 입력해보게나!</p>
+                </div>
+            </div>
+
+            <!-- Professor Portrait -->
+            <div class="professor-avatar-container">
+                <div class="hologram-grid-floor"></div>
+                <img src="./pokemon_professor.png" alt="포켓몬 박사님" class="professor-avatar" />
+            </div>
+        </section>
+
+        <!-- Right: Search & Pokédex Dashboard -->
+        <section class="pokedex-zone">
+            <!-- Search Console -->
+            <div class="search-panel">
+                <form id="searchForm">
+                    <div class="input-glow-wrapper">
+                        <input name="search" id="searchInput" placeholder="예: 피카츄, pikachu, 25" required autocomplete="off" />
+                        <span class="focus-border"></span>
+                    </div>
+                    <button type="submit" class="btn-search">
+                        <span class="btn-glow"></span>
+                        <span class="btn-text">도감 조회</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Pokédex Screen -->
+            <section id="searchContainer" class="pokedex-screen">
+                <div class="screen-bezel-lights">
+                    <span class="bezel-dot red"></span>
+                    <span class="bezel-dot yellow"></span>
+                    <span class="bezel-dot green"></span>
+                </div>
+                
+                <div id="searchResult" class="screen-viewport">
+                    <!-- Default Initial State -->
+                    <div class="welcome-screen">
+                        <div class="pokeball-loading-icon idle">
+                            <div class="pokeball-top"></div>
+                            <div class="pokeball-center"></div>
+                            <div class="pokeball-bottom"></div>
+                        </div>
+                        <h3>포켓몬 데이터베이스 오프라인</h3>
+                        <p>조회할 포켓몬의 식별자를 상단 검색창에 입력하여 분석기를 가동해주십시오.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Background Decoration Grid -->
+    <div class="lab-grid-overlay"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./02_script.js"></script>
+</body>
+
+</html>
